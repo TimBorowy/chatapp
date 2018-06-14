@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title>Socket.IO chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="static/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+
+    <div id="nickname">
+      <form action="" id="nicknameForm">
+            <input type="text" id="name" autofocus autocomplete="off" placeholder="Nickname...">
+            <button class="waves-effect waves-light btn">Use</button>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l3 hide-on-small-only">
+            <div id="personsContainer">
+                <ul id="online" class="collection"></ul>
+            </div>
+        </div>
+
+        <div class="col s12 m8 l9">
+            <div class="row">
+                <div class="col s12" id="messagesContainer">
+
+                    <div id="messages">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="input-footer" class="indigo darken-2">
+        <div class="container">
+            <form id="chatForm" action="">
+                <input id="m" autocomplete="off" autofocus/>
+                 <button class="btn waves-effect waves-light" type="submit" name="action">send</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="static/materialize-css/dist/js/materialize.min.js"></script>
+<script type="text/javascript" src="/js/script.js"></script>
+</html>

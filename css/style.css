@@ -1,0 +1,183 @@
+/**{
+    margin: 0;
+    font-family: arial;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+#flexContainer{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.persons{
+    //flex-grow: 1;
+    border: 5px solid black;
+    background-color: #505050;
+    min-width: 300px;
+    width: 30%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.container{
+    //flex-grow: 3;
+    height: 100%;
+    width: 70%;
+}
+.container #messages{
+    height: calc(100% - 50px);
+    overflow: auto;
+    list-style-type: none;
+    background-color: #8bc34a;
+}
+#messages{
+    padding: 30px;
+}
+#messages li{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #909090;
+    max-width: 50%;
+    font-size: 0.6em;
+    float: left;
+    clear: both;
+    word-wrap: break-word;
+}
+#messages #ownMessage{
+    float: right;
+    clear: both;
+}
+
+#online{
+    list-style-type: none;
+    padding: 0;
+    color: #FFF;
+}
+#online li{
+    padding: 5px 10px;
+    margin: 5px;
+    border: 2px solid tomato;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    //max-width: 280px;
+}
+
+#nickname{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #404040;
+}
+#chatForm{
+    width: 100%;
+    height: 50px;
+}
+#chatForm input{
+    width: calc(100% - 100px);
+    height: 50px;
+}
+#chatForm button{
+    width: 100px;
+    height: 50px;
+}
+#nickname form{
+    width: 60%;
+    margin: 20% auto;
+    box-sizing: border-box;
+}
+#nickname form input{
+    width: calc(100% - 80px);
+    height: 50px;
+}
+#nickname form button{
+    width: 80px;
+    height: 50px;
+}*/
+
+*{
+    margin: 0;
+    font-family: arial;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+/*
+    Nickname screen
+*/
+#nickname{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #404040;
+    z-index: 9999999;
+}
+#nickname form{
+    width: 60%;
+    margin: 20% auto;
+    box-sizing: border-box;
+}
+#nickname form input{
+    color: #FFF;
+}
+
+/*
+    Who's online box
+*/
+#personsContainer{
+    overflow: auto;
+}
+#online li{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*
+    Messages
+*/
+#messagesContainer{
+    overflow: auto;
+}
+#messages div{
+    padding: 0 20px;
+    border-bottom: 1px solid #9E9E9E;
+    word-wrap: break-word;
+}
+.msg-left{
+    text-align: left;
+}
+.msg-right{
+    text-align: right;
+}
+
+/*
+    Input form
+*/
+#input-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#input-footer .container{
+    padding: 20px 0;
+}
+#chatForm{
+    width: 100%;
+}
+#chatForm input{
+    color: #FFF;
+    width: calc(100% - 130px);
+    height: 50px;
+}
+
